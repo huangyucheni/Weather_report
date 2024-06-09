@@ -1,6 +1,3 @@
-time
 requests
-json
 schedule
 bs4
-os
