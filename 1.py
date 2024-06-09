@@ -141,8 +141,5 @@ def timetable(message):
 
 
 if __name__ == '__main__':
-    #weather_report("杭州")
+    weather_report("杭州")
     schedule.every().day.at("07:00").do(weather_report, "杭州")
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
