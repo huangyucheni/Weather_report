@@ -5,15 +5,16 @@ import requests
 import json
 import schedule
 from bs4 import BeautifulSoup
+import os
 
 
 # 从测试号信息获取
-appID = "wxa5b362d2ac1c68fb"
-appSecret = "786c0ccde901bca42dbad353a018c001"
+appID = os.environ.get("APPID")
+appSecret = os.environ.get("APPSECRET")
 #收信人ID即 用户列表中的微信号，见上文
-openId = "o8gk-67_yZHfLC_Atar5V8xvdKhI"
+openId = os.environ.get("OPENID")
 # 天气预报模板ID
-weather_template_id = "zNhSX7G6kTjkJz-9tIJu1s0pREpUc6JcxTvKp2GEyLM"
+weather_template_id = os.environ.get("WEATHER_TEMPLATE_ID")
 
 
 def get_weather(my_city):
